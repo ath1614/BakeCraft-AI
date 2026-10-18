@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakeCraft AI — 100% Local Cottage Bakery & Micro-Catering Profit Engine</title>
+    <meta name="description" content="100% local, open-weights recipe batch scaler, FDA Cottage Food descending label generator, and profit margin engine for home bakers and micro-caterers powered by Google Gemma 2 (2B)." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥖</text></svg>" />
+    <script type="module" crossorigin src="./assets/index-B8UvAvK8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DEGPFyWA.css">
+  </head>
+  <body>
+    <div class="app-container">
+      
+      <!-- Top Navigation Bar -->
+      <header class="top-nav">
+        <div class="brand-section">
+          <div class="brand-logo-badge" id="app-logo">🥖</div>
+          <div class="brand-info">
+            <h1>BakeCraft AI</h1>
+            <p>Cottage Bakery & Micro-Catering Profit Studio</p>
+          </div>
+        </div>
+
+        <!-- Pill Navigation -->
+        <nav class="nav-pills">
+          <button class="nav-pill-btn active" data-tab="dashboard">
+            <span>📊</span> Dashboard
+          </button>
+          <button class="nav-pill-btn" data-tab="scaler">
+            <span>⚖️</span> Recipe Scaler
+          </button>
+          <button class="nav-pill-btn" data-tab="margins">
+            <span>💰</span> Cost & Margin
+          </button>
+          <button class="nav-pill-btn" data-tab="label">
+            <span>🏷️</span> FDA Cottage Label
+          </button>
+          <button class="nav-pill-btn" data-tab="drops">
+            <span>✨</span> Social Drops
+          </button>
+        </nav>
+
+        <div class="nav-right-actions">
+          <div class="badge-offline-chip">
+            <span class="pulse-dot"></span>
+            <span>Gemma 2 (2B) Local • 100% Offline</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Header & Greeting -->
+      <section class="hero-header">
+        <div class="greeting-text">
+          <h2 id="hero-greeting">Good Morning, Baker Elena 👋</h2>
+          <p id="hero-subtitle">Production Run & Margin Audit Engine • Zero Cloud Subscriptions</p>
+        </div>
+
+        <!-- Preset Switcher Bar -->
+        <div class="preset-switcher-bar">
+          <span class="preset-tag">Preset:</span>
+          <button class="preset-chip active" data-preset="artisan-sourdough-batard">🥖 Sourdough Batard</button>
+          <button class="preset-chip" data-preset="brown-butter-brioche-buns">🥐 Brioche Buns</button>
+          <button class="preset-chip" data-preset="vanilla-bean-celebration-cake">🎂 Celebration Cake</button>
+          <button class="preset-chip" data-preset="raspberry-rose-macarons-12">🌸 Luxe Macarons</button>
+        </div>
+      </section>
+
+      <!-- KPI Summary Cards Grid -->
+      <section class="kpi-grid">
+        <!-- KPI 1: Gross Margin & Slider -->
+        <div class="kpi-card highlight-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Gross Profit Margin</span>
+            <span class="kpi-badge" id="margin-badge">72% Healthy</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-margin-value">72%</span>
+            <span class="kpi-subtext">Target Margin</span>
+          </div>
+          <div class="kpi-slider-box">
+            <label>
+              <span>Margin Slider:</span>
+              <span id="slider-margin-display">72%</span>
+            </label>
+            <input type="range" id="margin-range-slider" class="styled-slider" min="40" max="85" value="72" step="1" />
+          </div>
+        </div>
+
+        <!-- KPI 2: Suggested Retail Unit Price -->
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Suggested Retail Price</span>
+            <span class="kpi-badge badge-green" id="kpi-unit-badge">Per Unit</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-retail-price">$16.50</span>
+            <span class="kpi-subtext" id="kpi-unit-label">/ Loaf</span>
+          </div>
+          <p class="kpi-subtext" id="kpi-batch-revenue">Batch Revenue: $33.00 (2 Units)</p>
+        </div>
+
+        <!-- KPI 3: Prime Cost Per Unit -->
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">True Unit Cost</span>
+            <span class="kpi-badge badge-amber" id="kpi-cost-badge">Food + Pack + Labor</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-unit-cost">$4.62</span>
+            <span class="kpi-subtext">/ Unit</span>
+          </div>
+          <p class="kpi-subtext" id="kpi-batch-cost">Total Batch Outlay: $9.24</p>
+        </div>
+
+        <!-- KPI 4: Effective Baker Wage -->
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Baker Net Wage</span>
+            <span class="kpi-badge badge-green">Take-Home</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-hourly-wage">$47.50</span>
+            <span class="kpi-subtext">/ Hour</span>
+          </div>
+          <p class="kpi-subtext" id="kpi-profit-takehome">Net Profit: $23.76 + $11.00 Labor</p>
+        </div>
+      </section>
+
+      <!-- Main Studio 2-Column Grid -->
+      <main class="studio-grid">
+        
+        <!-- Left Column: Recipe Batch Scaler & Cost Matrix -->
+        <div class="studio-column-left">
+          
+          <div class="studio-card" id="recipe-scaler-card">
+            <div class="studio-card-header">
+              <div class="card-title-group">
+                <h3 id="current-recipe-title">Artisan Sourdough Batard (75% Hydration)</h3>
+                <p id="current-recipe-desc">Cold-fermented wild sourdough with blistered ear and open custard crumb.</p>
+              </div>
+              <button class="btn-outline" id="btn-add-ingredient">
+                <span>➕</span> Add Item
+              </button>
+            </div>
+
+            <!-- Batch Multiplier Pills -->
+            <div class="multiplier-bar">
+              <button class="scale-btn" data-mult="0.5">0.5x Test</button>
+              <button class="scale-btn active" data-mult="1.0">1x Std (2)</button>
+              <button class="scale-btn" data-mult="2.0">2x Double (4)</button>
+              <button class="scale-btn" data-mult="3.0">3x Market (6)</button>
+              <button class="scale-btn" data-mult="5.0">5x Catering (10)</button>
+            </div>
+
+            <!-- Ingredients Table -->
+            <div class="ingredients-table-wrap">
+              <table class="ingredients-table">
+                <thead>
+                  <tr>
+                    <th>Ingredient / Sub-Component</th>
+                    <th style="text-align: right;">Batch (g)</th>
+                    <th style="text-align: right;">Cost ($)</th>
+                    <th>Allergens</th>
+                  </tr>
+                </thead>
+                <tbody id="ingredients-tbody">
+                  <!-- Injected via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Packaging & Labor Grid -->
+            <div class="packaging-labor-grid">
+              <div class="micro-card">
+                <h4>📦 Packaging Outlay</h4>
+                <div id="packaging-items-list">
+                  <!-- Injected via JavaScript -->
+                </div>
+              </div>
+              <div class="micro-card">
+                <h4>⏱️ Labor & Oven Utilities</h4>
+                <div class="micro-row">
+                  <span class="label">Active Labor Time:</span>
+                  <span class="value" id="labor-minutes-val">30 mins</span>
+                </div>
+                <div class="micro-row">
+                  <span class="label">Baker Wage Base:</span>
+                  <span class="value" id="labor-wage-val">$22.00 / hr</span>
+                </div>
+                <div class="micro-row">
+                  <span class="label">Hearth Deck Energy:</span>
+                  <span class="value" id="oven-overhead-val">$1.25</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gemma 2 Physics & Scaling Advisor Callout -->
+            <div class="advisor-card">
+              <div class="advisor-header">
+                <span>🧠</span>
+                <span>Gemma 2 (2B) Baker Advisor • Hydration & Kitchen Physics</span>
+              </div>
+              <p class="advisor-text" id="gemma-advisor-text">
+                Hydration calculated at 75%. Cold bulk fermentation for 14-18 hours will develop optimal lactic acid complexity and open gelatinized crumb.
+              </p>
+              <div id="gemma-warning-box"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Breakdown, FDA Label & Social Copy -->
+        <div class="studio-column-right">
+
+          <!-- 1. Cost & Profit Breakdown Visualizer -->
+          <div class="studio-card">
+            <div class="studio-card-header">
+              <div class="card-title-group">
+                <h3>Revenue & Prime Cost Distribution</h3>
+                <p>Every dollar analyzed down to the cent</p>
+              </div>
+            </div>
+
+            <div class="breakdown-meter-wrap">
+              <div class="meter-stacked-bar">
+                <div class="meter-slice slice-ingredients" id="slice-ing" style="width: 25%;"></div>
+                <div class="meter-slice slice-packaging" id="slice-pkg" style="width: 8%;"></div>
+                <div class="meter-slice slice-labor" id="slice-lbr" style="width: 15%;"></div>
+                <div class="meter-slice slice-profit" id="slice-pft" style="width: 52%;"></div>
+              </div>
+
+              <div class="legend-grid">
+                <div class="legend-item">
+                  <span class="legend-dot dot-ingredients"></span>
+                  <span class="legend-text">Ingredients</span>
+                  <span class="legend-val" id="legend-ing-val">$2.37 (26%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-packaging"></span>
+                  <span class="legend-text">Packaging</span>
+                  <span class="legend-val" id="legend-pkg-val">$1.56 (17%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-labor"></span>
+                  <span class="legend-text">Labor & Energy</span>
+                  <span class="legend-val" id="legend-lbr-val">$5.31 (18%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-profit"></span>
+                  <span class="legend-text">Net Profit</span>
+                  <span class="legend-val" id="legend-pft-val" style="color: var(--status-green);">$23.76 (72%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. FDA Cottage Food Printable Label (2" x 4") -->
+          <div class="studio-card" id="fda-label-card">
+            <div class="studio-card-header">
+              <div class="card-title-group">
+                <h3>FDA Cottage Food Sticker Label (2" x 4")</h3>
+                <p>Descending weight order & Big 9 allergen compliance</p>
+              </div>
+              <span class="kpi-badge badge-green">21 CFR 101.4</span>
+            </div>
+
+            <!-- Realistic Thermal Label Container -->
+            <div class="cottage-label-preview-card" id="printable-label">
+              <div class="label-corner-seal">COTTAGE FOOD COMPLIANT</div>
+              <div class="label-bakery-title" id="label-bakery-name">ELENA'S HEARTH & CRUMB</div>
+              <div class="label-product-name" id="label-recipe-title">ARTISAN SOURDOUGH BATARD</div>
+              <div class="label-net-weight" id="label-net-weight">NET WT. 850g (30.0 oz)</div>
+              
+              <div class="label-ingredients-block">
+                <span class="label-ingredients-title">INGREDIENTS:</span>
+                <span id="label-descending-ingredients">
+                  Unbleached Organic Bread Flour, Filtered Spring Water, Wild Sourdough Starter, Stone-Ground Whole Wheat Flour, Fine Grey Sea Salt.
+                </span>
+              </div>
+
+              <div class="label-allergen-banner" id="label-allergen-statement">
+                CONTAINS: WHEAT.
+              </div>
+
+              <div class="label-cottage-warning" id="label-cottage-warning">
+                Made in a home kitchen not inspected by the Department of State Health Services.
+              </div>
+
+              <div class="label-footer-meta">
+                <span id="label-batch-code">BATCH: BCH-20261018-01</span>
+                <span id="label-pack-date">PACKED: OCT 18, 2026</span>
+                <span>PERMIT #CF-8819</span>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="action-button-row">
+              <button class="btn-primary" id="btn-print-label">
+                <span>🖨️</span> Print Label (2x4 / PDF)
+              </button>
+              <button class="btn-outline" id="btn-copy-label">
+                <span>📋</span> Copy Label Text
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Sensory Social Drop Engine -->
+          <div class="studio-card" id="social-drops-card">
+            <div class="studio-card-header">
+              <div class="card-title-group">
+                <h3>Sensory Social Drop Generator</h3>
+                <p>Turn crust & crumb into sold-out Saturday mornings</p>
+              </div>
+            </div>
+
+            <div class="social-tab-pills">
+              <button class="social-tab-btn active" data-social="instagram">📸 Instagram Drop</button>
+              <button class="social-tab-btn" data-social="chalkboard">☕ Chalkboard Menu</button>
+              <button class="social-tab-btn" data-social="dm">💬 Pre-Order DM</button>
+            </div>
+
+            <div class="copy-box" id="social-copy-content">
+              <!-- Injected via JavaScript -->
+            </div>
+
+            <button class="btn-outline" id="btn-copy-social" style="width: 100%; justify-content: center;">
+              <span>✨</span> Copy Drop Announcement
+            </button>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toast">
+      <span id="toast-icon">✓</span>
+      <span id="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <!-- Application Script -->
+  </body>
+</html>
